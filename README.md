@@ -8,9 +8,7 @@ This is a [Next.js](https://nextjs.org) project implementing an interactive simu
 
 This **REEM Model** proposal outlines a speculative yet mathematically consistent theoretical model where measurable inertial mass emerges as a phenomenon arising from the universal motion induced by cosmic expansion, mediated by a "relativity field" (a scalar field tied to the cosmic microwave background, CMB). The model addresses key challenges in prior formulations (zero-velocity problem, Lorentz invariance violation, and compatibility with the Higgs mechanism) through a refined effective mass formula:
 
-```
-m_eff = k_1 ⟨φ⟩ + k_2 φ_0 (u^μ ∂_μ φ) / c²
-```
+$$m_{\text{eff}} = k_1 \langle \phi \rangle + k_2 \phi_0 \frac{u^\mu \partial_\mu \phi}{c^2}$$
 
 Where the baseline term ensures non-zero mass at rest, scalar quantities preserve Lorentz invariance, and the motion term integrates with Higgs-like physics.
 
@@ -22,9 +20,9 @@ To test the model's viability, we implement a **TypeScript-based REEM simulation
 
 The observable inertial mass of particles and objects is not intrinsic (as in the SM's Higgs mechanism) but emergent from:
 
-- **Universal Expansion**: All matter recedes according to Hubble's law `v = H_0 d`, imprinting relative motion on all scales.
-- **Relativity Field**: A pervasive scalar field `φ(x)`, analogous to CMB energy density `ρ_CMB ≈ 4.2 × 10^-14 J/m³`, evolving as `φ_0 ∝ 1/a^4` (radiation-like, tied to the scale factor `a(t)`).
-- **Relativity Force**: A pseudo-force from motion through `φ`, manifesting as inertia: `F = m_eff a`, where `m_eff` depends on velocity relative to the CMB frame or cosmic Hubble flow.
+- **Universal Expansion**: All matter recedes according to Hubble's law $v = H_0 d$, imprinting relative motion on all scales.
+- **Relativity Field**: A pervasive scalar field $\phi(x)$, analogous to CMB energy density $\rho_{\text{CMB}} \approx 4.2 \times 10^{-14} \, \text{J/m}^3$, evolving as $\phi_0 \propto 1/a^4$ (radiation-like, tied to the scale factor $a(t)$).
+- **Relativity Force**: A pseudo-force from motion through $\phi$, manifesting as inertia: $\vec{F} = m_{\text{eff}} \vec{a}$, where $m_{\text{eff}}$ depends on velocity relative to the CMB frame or cosmic Hubble flow.
 - **CMB as Reference**: The CMB defines a statistical rest frame (dipole anisotropy for moving observers), enabling mass observation without a strict aether.
 
 This yields a Machian view: inertia arises from the universe's global structure.
@@ -33,45 +31,41 @@ This yields a Machian view: inertia arises from the universe's global structure.
 
 Addressing prior challenges:
 
-- **Zero-Velocity Problem**: Baseline term `k_1 ⟨φ⟩` (Higgs-like vacuum expectation value, `⟨φ⟩ ≈ 246 GeV` in mass units) ensures `m_eff > 0` at `v = 0`.
-- **Lorentz Invariance**: Use Lorentz-scalar couplings (e.g., `u^μ ∂_μ φ`, four-velocity dotted with field gradient) and tie motion to the frame-independent Hubble parameter `H(t) = ḃ/a`.
-- **Higgs Compatibility**: `φ` subsumes or modulates the Higgs field via `L_int = λ φ φ_H²`; baseline mass matches SM, motion term adds cosmological correction.
+- **Zero-Velocity Problem**: Baseline term $k_1 \langle \phi \rangle$ (Higgs-like vacuum expectation value, $\langle \phi \rangle \approx 246 \, \text{GeV}$ in mass units) ensures $m_{\text{eff}} > 0$ at $v = 0$.
+- **Lorentz Invariance**: Use Lorentz-scalar couplings (e.g., $u^\mu \partial_\mu \phi$, four-velocity dotted with field gradient) and tie motion to the frame-independent Hubble parameter $H(t) = \dot{a}/a$.
+- **Higgs Compatibility**: $\phi$ subsumes or modulates the Higgs field via $\mathcal{L}_{\text{int}} = \lambda \phi \phi_H^2$; baseline mass matches SM, motion term adds cosmological correction.
 
 **Effective Mass**:
 
-```
-m_eff = k_1 ⟨φ⟩ + k_2 φ_0 (H(t) L) / c
-```
+$$m_{\text{eff}} = k_1 \langle \phi \rangle + k_2 \phi_0 \frac{H(t) L}{c}$$
 
-- `k_1, k_2`: Dimensionless couplings (`k_1 = 1`, `k_2 = ε · m_base / φ_0`, with `ε ≪ 1` for small corrections).
-- `L = c / H(t)`: Cosmological length scale (Hubble radius proxy for expansion-induced "velocity").
-- Relativistic form: `m_eff = k_1 ⟨φ⟩ + k_2 φ_0 (u^μ ∂_μ φ) / c²`, with `∂_μ φ ∝ H(t)`.
+- $k_1, k_2$: Dimensionless couplings ($k_1 = 1$, $k_2 = \epsilon \cdot m_{\text{base}} / \phi_0$, with $\epsilon \ll 1$ for small corrections).
+- $L = c / H(t)$: Cosmological length scale (Hubble radius proxy for expansion-induced "velocity").
+- Relativistic form: $m_{\text{eff}} = k_1 \langle \phi \rangle + k_2 \phi_0 \frac{u^\mu \partial_\mu \phi}{c^2}$, with $\partial_\mu \phi \propto H(t)$.
 
 **Lagrangian**:
 
-```
-L = ½ m_0 u^μ u_μ - k_1 φ - k_2 φ u^μ ∂_μ φ
-```
+$$\mathcal{L} = \frac{1}{2} m_0 u^\mu u_\mu - k_1 \phi - k_2 \phi u^\mu \partial_\mu \phi$$
 
-(`m_0 = 0` if fully emergent; equation of motion yields inertial force.)
+($m_0 = 0$ if fully emergent; equation of motion yields inertial force.)
 
-**Cosmological Evolution**: `φ_0(a) = φ_0,now (1/a)^4`, so `m_eff` was ~1-5% higher at decoupling (z=1100), affecting recombination and acoustic oscillations.
+**Cosmological Evolution**: $\phi_0(a) = \phi_{0,\text{now}} (1/a)^4$, so $m_{\text{eff}}$ was ~1-5% higher at decoupling (z=1100), affecting recombination and acoustic oscillations.
 
 #### 1.3 Key Predictions
 
 - **Early Universe**: Enhanced baryon mass increases sound horizon, boosting CMB acoustic peaks by 1-2%.
-- **Late Universe**: Negligible correction (`m_eff ≈ m_base`), matching SM.
-- **Local Effects**: Tiny mass variation (~10^-6) with CMB-frame velocity (`v_CMB ≈ 370 km/s`), testable in precision experiments.
+- **Late Universe**: Negligible correction ($m_{\text{eff}} \approx m_{\text{base}}$), matching SM.
+- **Local Effects**: Tiny mass variation (~10^-6) with CMB-frame velocity ($v_{\text{CMB}} \approx 370 \, \text{km/s}$), testable in precision experiments.
 - **Testability**: CMB deviations <2%; high-z matter clustering shifts; inertial mass modulation in accelerators.
 
 ### 2. Simulation Implementation
 
 The TypeScript-based simulation computes:
 
-1. **Hubble Parameter Evolution**: `H(a) = H_0 √(Ω_m/a³ + Ω_r/a⁴ + Ω_Λ)`
+1. **Hubble Parameter Evolution**: $H(a) = H_0 \sqrt{\Omega_m/a^3 + \Omega_r/a^4 + \Omega_\Lambda}$
 2. **Scale Factor Evolution**: Via ODE integration
-3. **Relativity Field**: `φ_0(a) = φ_0,now (1/a)^4`
-4. **Effective Mass**: `m_eff = k_1 ⟨φ⟩ + k_2 φ_0 (H(t) L) / c`
+3. **Relativity Field**: $\phi_0(a) = \phi_{0,\text{now}} (1/a)^4$
+4. **Effective Mass**: $m_{\text{eff}} = k_1 \langle \phi \rangle + k_2 \phi_0 \frac{H(t) L}{c}$
 
 The simulation visualizes:
 - Effective mass evolution vs. redshift
@@ -98,7 +92,7 @@ The simulation confirms subtle early-universe deviations (theory's signature) wh
 ### 5. Next Steps and Broader Impact
 
 - **Immediate**: Run the interactive simulation; tune parameters to match observational constraints.
-- **Extensions**: Add field fluctuations (Gaussian noise in `φ_0`); local v_CMB in accelerator simulations; high-z BAO tests.
+- **Extensions**: Add field fluctuations (Gaussian noise in $\phi_0$); local v_CMB in accelerator simulations; high-z BAO tests.
 - **Experiments**: Precision torsion balances for v_CMB mass shifts; LHC Higgs couplings vs. epoch.
 - **Impact**: If validated, revolutionizes inertia (Machian cosmology); simplifies SM by deriving Higgs from expansion; bridges quantum gravity gaps.
 
